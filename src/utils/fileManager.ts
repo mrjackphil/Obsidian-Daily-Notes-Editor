@@ -260,6 +260,8 @@ export class FileManager {
         now: moment.Moment
     ): boolean {
         switch (this.options.timeRange) {
+            case "today-after":
+                return fileDate.isSameOrBefore(now, "day");
             case "week":
                 return fileDate.isSame(now, "week");
             case "month":

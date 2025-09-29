@@ -197,11 +197,12 @@
         const hadDailyNote = fileManager.hasCurrentDayNote();
         fileManager.checkDailyNote();
         const hasDailyNote = fileManager.hasCurrentDayNote();
-        
+
         // If the daily note status changed (e.g., we just crossed midnight),
         // refresh the file list to ensure we show the current day's daily note
+
         if (hadDailyNote !== hasDailyNote || 
-            (selectionMode === "daily" && selectedRange !== "all")) {
+            (selectionMode === "daily" && selectedRange !== "all" && selectedRange != "today-after")) {
             // Get updated filtered files
             filteredFiles = fileManager.getFilteredFiles();
             

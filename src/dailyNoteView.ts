@@ -316,6 +316,7 @@ export class DailyNoteView extends ItemView {
             };
 
             addRangeOption("All Notes", "all");
+            addRangeOption("From today", "today-after");
             addRangeOption("This Week", "week");
             addRangeOption("This Month", "month");
             addRangeOption("This Year", "year");

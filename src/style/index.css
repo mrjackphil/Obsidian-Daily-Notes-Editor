@@ -1,3 +1,33 @@
+/* Hide backlinks when empty */
+.embedded-backlinks:has(.search-empty-state) {
+    display: none;
+}
+
+/* Hide white line at the start of the document */
+.cm-content>[contenteditable=false]+.cm-line:has(br) {
+    display: none;
+}
+
+/* Hide h1 heading */
+.cm-content>[contenteditable=false]+.cm-line+.HyperMD-header-1 {
+    display: none;
+}
+
+/* Hide line after h1 heading */
+.cm-content>[contenteditable=false]+.cm-line+.HyperMD-header-1+.cm-line {
+    display: none;
+}
+
+
+/* Hide unlinked mentions */
+.search-result-container+.tree-item-self {
+    display: none;
+
+    &+.search-result-container {
+        display: none;
+    }
+}
+
 .dn-editor {
     /*overflow-y: hidden;*/
 }

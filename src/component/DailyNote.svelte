@@ -204,10 +204,12 @@
 </div>
 
 <style>
+    /* 
     .daily-note {
         margin-bottom: var(--size-4-5);
         padding-bottom: var(--size-4-8);
     }
+    */
 
     .daily-note:has(.daily-note-editor[data-collapsed="true"]) {
         margin-bottom: 0;

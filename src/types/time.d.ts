@@ -1,4 +1,5 @@
 export type TimeRange =
+    | "today-after"
     | "week"
     | "month"
     | "year"
